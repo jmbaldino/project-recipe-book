@@ -16,9 +16,11 @@
 body {
   margin: 0;
   display: flex;
-  
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
 .NavigationBar img {
@@ -30,4 +32,46 @@ height: 80px;
   display: flex;
   justify-content:space-between;
   align-items: center;
+  height: 10vh;
+  background-color: #eeae54;
+}
+
+.NavigationBar h1 {
+  margin-left: 12px;
+}
+
+.NavigationBar img {
+  margin-right: 12px;
+}
+
+.footer {
+  height: 10vh;
+  background-color: #eeae54;
+}
+
+.sidebar {
+  background-color: rgb(161, 151, 0);
+  width: 20vw;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  height: 80vh;
+}
+
+.block {
+  width: 80vw;
+  /* background-color: blueviolet; */
+}
+
+.linkHomePage {
+  margin-top: 40px;
+  margin-bottom: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }

@@ -1,6 +1,6 @@
 function Footer () {
     return (
-    <div>
+    <div className = "footer">
         <a href = {"https://github.com/jmbaldino/project-recipe-book"}>
         GitHub repository
         </a>

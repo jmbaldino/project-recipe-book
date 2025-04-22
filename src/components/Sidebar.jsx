@@ -1,7 +1,7 @@
 function Sidebar () {
     return (
-        <div>
-            <div>
+        <div className="sidebar">
+            <div className = "linkHomePage">
                 <a href = {""}>
                 Home Page
                 </a>

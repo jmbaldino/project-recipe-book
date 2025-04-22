@@ -9,8 +9,9 @@ function App() {
   return (
     <>
     <Navbar />
-    <div>
+    <div className = "content">
       <Sidebar />
+      <div className = "block"></div>
     </div>
     <Footer/>
     </>
