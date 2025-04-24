@@ -23,6 +23,11 @@ body {
   height: 100vh;
 }
 
+a {
+  color: rgba(255, 255, 255, 0.87);
+  text-decoration: none;
+}
+
 .NavigationBar img {
 height: 80px;
 }
@@ -52,7 +57,7 @@ height: 80px;
 
 .sidebar {
   background-color: rgb(161, 151, 0);
-  width: 20vw;
+  width: 15vw;
   display: flex;
   flex-direction:column;
   align-items:center;
@@ -64,14 +69,9 @@ height: 80px;
   min-height: 80vh;
 }
 
-.linkHomePage {
-  margin-top: 40px;
+.home-container {
+  margin-top: 20px;
   margin-bottom: 5px;
-}
-
-a {
-  text-decoration: none;
-  color: white;
 }
 
 .recipe {
@@ -93,6 +93,12 @@ a {
 
 .btn-delete {
   margin-left: 15px;
+}
+
+.about-container {
+  margin-top: 30px;
+  margin-left: 40px;
+  padding: 0;
 }
 
 .not-found {
