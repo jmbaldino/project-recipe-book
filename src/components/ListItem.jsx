@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function ListItem(props) {
   return (
     <div className="recipe">
@@ -15,6 +17,9 @@ function ListItem(props) {
           }}
         >
           Delete Recipe
+        </button>
+        <button>
+          <Link to={`/details/${props.allRecipes.id}`}>Details</Link>
         </button>
       </div>
     </div>
