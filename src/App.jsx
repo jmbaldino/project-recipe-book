@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 import Dashboard from './pages/Dashboard';
 import ItemDetails from './pages/ItemDetails';
+import NotFound from './pages/NotFound';
 
 import './index.css';
 
@@ -27,6 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Dashboard allRecipes={recipesArr} callbackToDelete={deleteRecipe} />} />
           <Route path="/details/:recipeId" element={<ItemDetails allRecipes={recipesArr} />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
       <Footer />

@@ -61,6 +61,7 @@ height: 80px;
 .content {
   display: flex;
   flex-direction: row;
+  min-height: 80vh;
 }
 
 .linkHomePage {
@@ -92,4 +93,9 @@ a {
 
 .btn-delete {
   margin-left: 15px;
+}
+
+.not-found {
+  margin: auto;
+  margin-top: 10vh;
 }
