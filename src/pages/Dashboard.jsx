@@ -1,7 +1,7 @@
 import RecipesList from '../components/RecipesList';
 
-function Dashboard() {
-  return <RecipesList />;
+function Dashboard(props) {
+  return <RecipesList allRecipes={props.allRecipes} callbackToDelete={props.callbackToDelete} />;
 }
 
 export default Dashboard;

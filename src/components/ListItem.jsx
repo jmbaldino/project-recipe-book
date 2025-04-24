@@ -8,18 +8,16 @@ function ListItem(props) {
       </div>
       <div className="recipes-info">
         <h2>{props.allRecipes.name}</h2>
-        <p>calories: {props.allRecipes.calories}</p>
-        <p>servings: {props.allRecipes.servings}</p>
-        {props.allRecipes.calories < 250 ? <p>✔️</p> : <p>❌</p>}
+        <button>
+          <Link to={`/details/${props.allRecipes.id}`}>Details</Link>
+        </button>
         <button
+          className="btn-delete"
           onClick={() => {
             props.callbackToDelete(props.allRecipes.id);
           }}
         >
           Delete Recipe
-        </button>
-        <button>
-          <Link to={`/details/${props.allRecipes.id}`}>Details</Link>
         </button>
       </div>
     </div>
