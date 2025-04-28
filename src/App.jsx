@@ -15,9 +15,13 @@ import './index.css';
 function App() {
   const [recipesArr, setRecipesArr] = useState(recipes);
 
+  const addRecipe = (recipeToAdd) => {
+    const newList = [recipeToAdd, ...recipesArr];
+    setRecipesArr(newList);
+  };
+
   const deleteRecipe = (recipeToBeDeleted) => {
     const newList = recipesArr.filter((recipe) => recipe.id !== recipeToBeDeleted);
-
     setRecipesArr(newList);
   };
 
@@ -27,7 +31,10 @@ function App() {
       <div className="content">
         <Sidebar />
         <Routes>
-          <Route path="/" element={<Dashboard allRecipes={recipesArr} callbackToDelete={deleteRecipe} />} />
+          <Route
+            path="/"
+            element={<Dashboard allRecipes={recipesArr} callbackToDelete={deleteRecipe} callbackToAdd={addRecipe} />}
+          />
           <Route path="/details/:recipeId" element={<ItemDetails allRecipes={recipesArr} />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />

@@ -11,12 +11,12 @@ function About() {
         <p>The Recipe Book App was created in pair-programming by:</p>
         <ul>
           <li>
-            André Kaltenbach, Germany, <a href="https://github.com/andrekaltenbach">🔗GitHub</a>{' '}
-            <a href="www.linkedin.com/in/andrekaltenbach">🔗LinkedIn</a>
-          </li>
-          <li>
             José Manuel Baldino, Portugal, <a href="https://github.com/jmbaldino">🔗GitHub</a>{' '}
             <a href="https://www.linkedin.com/in/josemanuelbaldino/">🔗LinkedIn</a>
+          </li>
+          <li>
+            André Kaltenbach, Germany, <a href="https://github.com/andrekaltenbach">🔗GitHub</a>{' '}
+            <a href="www.linkedin.com/in/andrekaltenbach">🔗LinkedIn</a>
           </li>
         </ul>
       </div>
