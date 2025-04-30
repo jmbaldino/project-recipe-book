@@ -26,29 +26,18 @@ function App() {
   };
 
   const updateRecipe = (recipeToBeUpdated) => {
-    console.log(recipesArr)
-    
-    const index = recipesArr.indexOf()
-    // const newList = recipesArr.map((recipe) => {
-    //   if (recipe.id === recipeToBeUpdated.id) {
-    //     console.log(recipeToBeUpdated.name)
-    //     return ( 
-    //     recipe.name = recipeToBeUpdated.name,
-    //     recipe.calories = recipeToBeUpdated.calories,
-    //     recipe.image = recipeToBeUpdated.image,
-    //     recipe.servings = recipeToBeUpdated.servings)
-    //   } else {
-    //     return (
-    //       recipe.name ,  recipe.calories , recipe.image , recipe.servings
-    //     )
-    //   }
-    // })
-    // console.log(newList)
+    console.log(recipesArr);
 
-    // setRecipesArr(newList)
+    const newList = recipesArr.map((recipe) => {
+      if (recipe.id === recipeToBeUpdated.id) {
+        return (recipe = recipeToBeUpdated);
+      } else {
+        return recipe;
+      }
+    });
 
-  }
-
+    setRecipesArr(newList);
+  };
 
   return (
     <>
@@ -60,7 +49,10 @@ function App() {
             path="/"
             element={<Dashboard allRecipes={recipesArr} callbackToDelete={deleteRecipe} callbackToAdd={addRecipe} />}
           />
-          <Route path="/details/:recipeId" element={<ItemDetails allRecipes={recipesArr} updateRecipe={updateRecipe}/>} />
+          <Route
+            path="/details/:recipeId"
+            element={<ItemDetails allRecipes={recipesArr} updateRecipe={updateRecipe} />}
+          />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
