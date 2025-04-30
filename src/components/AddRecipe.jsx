@@ -34,57 +34,57 @@ function AddRecipe(props) {
   return (
     <div className="add-recipe">
       <form onSubmit={handleSubmit}>
-        <label>
-          Name:
+        <div className="form-group">
+          <label htmlFor="name">Name:</label>
           <input
+            id="name"
             type="text"
             name="name"
             placeholder="recipe title"
             value={name}
-            onChange={(e) => {
-              setName(e.target.value);
-            }}
+            onChange={(e) => setName(e.target.value)}
           />
-        </label>
-        <label>
-          Calories:
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="calories">Calories:</label>
           <input
+            id="calories"
             type="number"
             name="calories"
             placeholder="calories"
             value={calories}
-            onChange={(e) => {
-              setCalories(e.target.value);
-            }}
+            onChange={(e) => setCalories(e.target.value)}
           />
-        </label>
-        <label>
-          Image:
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="image">Image:</label>
           <input
+            id="image"
             type="text"
             name="image"
             placeholder="image URL"
             value={image}
-            onChange={(e) => {
-              setImage(e.target.value);
-            }}
+            onChange={(e) => setImage(e.target.value)}
           />
-        </label>
-        <label>
-          Servings:
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="servings">Servings:</label>
           <input
+            id="servings"
             type="number"
             name="servings"
             placeholder="number of servings"
             value={servings}
-            onChange={(e) => {
-              setServings(e.target.value);
-            }}
+            onChange={(e) => setServings(e.target.value)}
           />
-        </label>
+        </div>
+        <button type="submit">Add Recipe</button>
       </form>
-      <button onClick={handleSubmit}>Add Recipe</button>
     </div>
+
   );
 }
 

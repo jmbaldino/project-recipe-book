@@ -9,16 +9,16 @@ function ItemDetails(props) {
   });
   // implement display item details
   return (
-    <div className="recipe">
+    <div className="recipe-info">
       <div>
         <img src={recipeItem.image} alt="image" className="recipes-image" />
       </div>
-      <div className="recipes-info">
-        <h2>{recipeItem.name}</h2>
-        <p>calories: {recipeItem.calories}</p>
-        <p>servings: {recipeItem.servings}</p>
+      <div className="recipes-info-details">
+        <h2><strong>{recipeItem.name}</strong></h2>
+        <p><strong>Kcal:</strong> {recipeItem.calories}</p>
+        <p><strong>Servings:</strong> {recipeItem.servings}</p>
         {recipeItem.calories < 250 ? <p>✔️</p> : <p>❌</p>}
-        <button>
+        <button className="back-btn">
           <Link to="/">Back</Link>
         </button>
       </div>

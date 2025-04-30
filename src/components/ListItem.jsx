@@ -8,7 +8,7 @@ function ListItem(props) {
       </div>
       <div className="recipes-info">
         <h2>{props.allRecipes.name}</h2>
-        <button>
+        <button className='btn-details'>
           <Link to={`/details/${props.allRecipes.id}`}>Details</Link>
         </button>
         <button
