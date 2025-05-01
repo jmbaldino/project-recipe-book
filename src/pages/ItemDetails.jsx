@@ -8,18 +8,24 @@ function ItemDetails(props) {
   const recipeItem = props.allRecipes.find((elementObj) => {
     return elementObj.id === recipeId;
   });
-  // implement display item details
+
   return (
-    <div>
-      < UpdateRecipe recipe = {recipeItem} updateRecipe={props.updateRecipe}/>
+    <div className="ItemDetails">
+      <UpdateRecipe recipe={recipeItem} updateRecipe={props.updateRecipe} />
       <div className="recipe-info">
         <div>
           <img src={recipeItem.image} alt="image" className="recipes-image" />
         </div>
         <div className="recipes-info-details">
-          <h2><strong>{recipeItem.name}</strong></h2>
-          <p><strong>Kcal:</strong> {recipeItem.calories}</p>
-          <p><strong>Servings:</strong> {recipeItem.servings}</p>
+          <h2>
+            <strong>{recipeItem.name}</strong>
+          </h2>
+          <p>
+            <strong>Kcal:</strong> {recipeItem.calories}
+          </p>
+          <p>
+            <strong>Servings:</strong> {recipeItem.servings}
+          </p>
           {recipeItem.calories < 250 ? <p>✔️</p> : <p>❌</p>}
           <button className="back-btn">
             <Link to="/">Back</Link>
